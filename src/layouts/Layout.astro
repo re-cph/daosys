@@ -1,0 +1,21 @@
+---
+import MainNavigation from "../components/MainNavigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="da-DK">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Daosys</title>
+    <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
+  </head>
+  <body>
+    <MainNavigation client:load />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

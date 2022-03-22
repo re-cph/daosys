@@ -1,0 +1,101 @@
+---
+import menuItems from "../layouts/menuItems.mjs";
+import shapesHorizontal from "../images/shapes-horizontal.png";
+import shapesHorizontal2x from "../images/shapes-horizontal@2x.png";
+import twitter from "../images/twitter.svg";
+import facebook from "../images/facebook.svg";
+import linkedIn from "../images/linkedIn.svg";
+
+const currentPage = Astro.request.url.pathname;
+---
+
+<div class="container mx-auto grid grid-cols-12">
+  <img
+    src={shapesHorizontal}
+    srcset={shapesHorizontal2x}
+    alt=""
+    class="col-span-12 md:col-span-5 md:-ml-20"
+  />
+</div>
+<footer class="bg-blue pt-40 -mt-36">
+  <div class="container grid grid-cols-12 mx-auto text-white">
+    <ul class="col-span-6 md:col-span-2 space-y-8">
+      {menuItems.map(({ href, name }) => (
+        <li class="leading-tight">
+          <a
+            class={`text-lg hover:opacity-50 ${
+              currentPage === href ? "underline" : ""
+            }`}
+            href={`${href}`}
+          >
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <div class="hidden md:grid col-span-1"></div>
+
+    <div class="grid col-span-6 md:grid-cols-2 md:col-span-4">
+      <div class="md:col-span-1">
+        <h3 class="text-2xl">Contact</h3>
+        <address class="mt-4 not-italic">
+          Longstreet name 12<br />
+          12456 Vancouver,<br />
+          Canada
+        </address>
+      </div>
+
+      <div class="md:col-span-1 pt-8 md:pt-12">
+        <div>
+          T. <a href="tel:60473923012">604 739 230 12</a>
+        </div>
+        <div>
+          M. <a href="mailto:mail@daosys.com">mail@daosys.com</a>
+        </div>
+        <div class="flex space-x-4 mt-8">
+          <a href="">
+            <img src={facebook} />
+          </a>
+          <a href="https://twitter.com/daosys_official/" target="_blank">
+            <img src={twitter} />
+          </a>
+          <a href="">
+            <img src={linkedIn} />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden md:grid col-span-1"></div>
+
+    <div class="col-span-12 md:col-span-4 mt-20 md:mt-0">
+      <h3 class="text-2xl">Sign up to mailing list</h3>
+      <p class="mt-4">
+        Stay tuned with the latest news and input mail below ipsum dolor sit
+        amet, consectetur.
+      </p>
+
+      <form class="flex mt-8 space-x-8">
+        <input
+          type="text"
+          class="flex-grow bg-blue border-b-2 border-white placeholder-white"
+          placeholder="Enter e-mail"
+        />
+        <input
+          type="submit"
+          value="Submit"
+          class="rounded-full p-2 px-6 border cursor-pointer hover:bg-blue-light hover:text-blue"
+        />
+      </form>
+    </div>
+  </div>
+  <div
+    class="container mx-auto grid grid-cols-2 text-white text-sm mt-36 pb-12"
+  >
+    <div>&copy; 2022, daosys</div>
+    <div class="grid justify-end">
+      <a href="">Privacy Policy</a>
+    </div>
+  </div>
+</footer>

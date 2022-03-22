@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Space Grotesk Regular"), local("SpaceGrotesk-Regular"),
+    url("/fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
+    url("/fonts/SpaceGrotesk-Regular.woff") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Space Grotesk Bold"), local("SpaceGrotesk-Bold"),
+    url("/fonts/SpaceGrotesk-Bold.woff2") format("woff2"),
+    url("/fonts/SpaceGrotesk-Bold.woff") format("woff");
+}
+
+html,
+body {
+  @apply bg-white;
+  @apply text-blue;
+}
+
+/* h1 {
+  font-size: 3.75rem;
+  @apply leading-none;
+} */
+
+h2 {
+  /* font-size: 3.125rem;
+  line-height: 3.375rem; */
+  font-size: 2.1875rem;
+  line-height: 3rem;
+}
+
+/* .sub-header {
+  font-size: 1.5rem;
+  @apply leading-9;
+} */
+
+/* main a {
+  @apply underline;
+}
+
+main a:hover {
+  @apply opacity-50;
+} */

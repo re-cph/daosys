@@ -1,0 +1,107 @@
+---
+import logo from "../images/logo.svg";
+import menuItems from "../layouts/menuItems.mjs";
+
+const currentPage = Astro.request.url.pathname;
+---
+
+<aside
+  class="fixed grid grid-cols-2 w-full text-white col-span-12 sm:col-span-3 lg:col-span-2 text-body sm:text-menu"
+  id="menu"
+>
+  <img src={logo} class="m-8 mx-4 md:mx-8" />
+
+  <input type="checkbox" id="menuCheckbox" class="hidden" />
+  <label
+    for="menuCheckbox"
+    class="sm:hidden absolute right-0 top-4 py-4 px-2.5 w-12 h-12"
+  >
+    <div></div>
+    <div></div>
+    <div></div>
+  </label>
+  <nav class="mt-12 duration-300" id="menuContainer">
+    <ul class="flex space-x-12 justify-end mr-12">
+      {menuItems.map(({ href, name }) => (
+        <li class="leading-tight">
+          <a
+            class={`hover:opacity-50 ${
+              currentPage === href ? "underline" : ""
+            }`}
+            href={`${href}`}
+          >
+            {name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</aside>
+
+<script hoist type="module">
+  const checkbox = document.getElementById("menuCheckbox");
+  const container = document.getElementById("menuContainer");
+
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      container.classList.add("opened");
+    } else {
+      container.classList.remove("opened");
+    }
+  });
+</script>
+
+<style>
+  @media (max-width: 767px) {
+    nav {
+      margin-top: -100%;
+      transition-property: margin-top;
+    }
+    nav.opened {
+      margin-top: 0;
+    }
+  }
+
+  label {
+    position: absolute;
+    cursor: pointer;
+  }
+
+  label div {
+    position: relative;
+    top: 0;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+    width: 24px;
+    background-color: #fff;
+    height: 2px;
+    margin-bottom: 6px;
+  }
+
+  label div:first-child {
+    transform-origin: 0;
+  }
+
+  label div:last-child {
+    margin-bottom: 0;
+    transform-origin: left;
+  }
+
+  label div:nth-child(2) {
+    right: 0;
+  }
+
+  input:checked + label div:first-child {
+    transform: translateX(5px) translateY(-0.5px) rotateZ(45deg);
+  }
+
+  input:checked + label div:last-child {
+    transform: translateX(5px) translateY(0.5px) rotateZ(-45deg);
+  }
+
+  input:checked + label div:nth-child(2) {
+    opacity: 0;
+    transform: translateX(50%) scaleX(0);
+  }
+</style>
