@@ -11,8 +11,12 @@ const box2Css = `${item.bgColor} grid place-content-center md:w-1/2 p-8 md:px-24
 <div class={wrapperCss}>
   <div class={box1Css}>
     <!-- <img src={item.image} /> -->
-    <video class="band-video h-full" src={item.video} playsinline="" muted=""
-    ></video>
+    <video
+      class="band h-full"
+      src={item.video}
+      playsinline=""
+      muted=""
+      data-color={item.textColor}></video>
   </div>
   <div class={box2Css}>
     <div>

@@ -7,7 +7,7 @@ import Band from "../components/band.astro";
 
 <Layout>
   <!-- Hero -->
-  <div class="bg-blue-lighter">
+  <div id="home" class="band bg-blue-lighter" data-color="text-white">
     <div
       class="container mx-auto text-white md:grid grid-cols-12 gap-x-4 items-center h-screen"
     >
@@ -48,7 +48,11 @@ import Band from "../components/band.astro";
     </div>
   </div>
   <!-- Text section -->
-  <div class="container mx-auto py-40 text-splash">
+  <div
+    id="about"
+    class="band container mx-auto py-40 text-splash"
+    data-color="text-blue"
+  >
     <p>
       DAOs are organizations that run completely on the blockchain and are
       governed by token holders. They are fully autonomous, transparent and
@@ -61,7 +65,9 @@ import Band from "../components/band.astro";
       Risk-free deployment of capital.
     </p>
   </div>
-  {bands.map((band, index) => <Band item={band} index={index} />)}
+  <div id="services">
+    {bands.map((band, index) => <Band item={band} index={index} />)}
+  </div>
 </Layout>
 
 <script hoist type="module">
@@ -76,18 +82,38 @@ import Band from "../components/band.astro";
   };
 
   // Load animation vids while scrolling
+  const menu = document.getElementById("menu");
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
-        entry.target.play();
-        // entry.target.src = entry.target.dataset.src;
-        // entry.target.classList.add(‘loaded)
+        if (entry.target.tagName === "VIDEO") {
+          entry.target.play();
+        }
         observer.unobserve(entry.target);
       }
     });
   }
 
-  const target = document.querySelectorAll(".band-video");
-  const observer = new IntersectionObserver(handleIntersection);
+  function handleIntersection2(entries) {
+    entries.map((entry) => {
+      // console.log("entry.intersectionRatio", entry.intersectionRatio);
+      if (entry.isIntersecting) {
+        menu.classList.replace(
+          menu.dataset.previousColor,
+          entry.target.dataset.color
+        );
+        menu.dataset.previousColor = entry.target.dataset.color;
+      }
+    });
+  }
+
+  const target = document.querySelectorAll(".band");
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.2,
+  });
+  const observer2 = new IntersectionObserver(handleIntersection2, {
+    threshold: 1,
+  });
   target.forEach((element) => observer.observe(element));
+  target.forEach((element) => observer2.observe(element));
 </script>

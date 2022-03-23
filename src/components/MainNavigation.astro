@@ -6,10 +6,13 @@ const currentPage = Astro.request.url.pathname;
 ---
 
 <aside
-  class="fixed grid grid-cols-2 w-full text-white col-span-12 sm:col-span-3 lg:col-span-2 text-body sm:text-menu"
+  class="fixed z-10 grid grid-cols-2 w-full col-span-12 sm:col-span-3 lg:col-span-2 text-white"
+  data-previousColor="text-white"
   id="menu"
 >
-  <img src={logo} class="m-8 mx-4 md:m-12" />
+  <a href="#home" class="flex">
+    <img src={logo} class="m-8 mx-4 md:m-12" />
+  </a>
 
   <input type="checkbox" id="menuCheckbox" class="hidden" />
   <label
@@ -39,6 +42,18 @@ const currentPage = Astro.request.url.pathname;
 </aside>
 
 <script hoist type="module">
+  // SMOOTH SCROLLING
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // MOBILE MENU
   const checkbox = document.getElementById("menuCheckbox");
   const container = document.getElementById("menuContainer");
 
