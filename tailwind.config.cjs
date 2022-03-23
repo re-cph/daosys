@@ -56,4 +56,15 @@ module.exports = {
       },
     },
   },
+  safelist: [
+    'text-white',
+    'text-blue',
+    'bg-blue',
+    'bg-blue-lighter',
+    'bg-white',
+    'bg-white-darker',
+    'bg-green',
+    'bg-green-lighter',
+    'outline-2'
+  ]
 };

@@ -1,0 +1,27 @@
+---
+const { item, index } = Astro.props;
+
+const wrapperCss = `${item.textColor} md:flex md:h-[45vw] ${
+  index % 2 === 0 ? "" : "flex-row-reverse"
+}`;
+const box1Css = `${item.imageBgColor} grid place-content-center md:w-1/2 p-8`;
+const box2Css = `${item.bgColor} grid place-content-center md:w-1/2 p-8 md:px-24`;
+---
+
+<div class={wrapperCss}>
+  <div class={box1Css}>
+    <!-- <img src={item.image} /> -->
+    <video
+      class="band-video"
+      data-src={item.video}
+      autoplay=""
+      playsinline=""
+      muted=""></video>
+  </div>
+  <div class={box2Css}>
+    <div>
+      <h2>{item.header}</h2>
+      <div class="mt-8">{item.text}</div>
+    </div>
+  </div>
+</div>

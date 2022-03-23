@@ -1,45 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import box from "../images/box.svg";
-import discs from "../images/discs.svg";
-import pie from "../images/pie.svg";
-import balls from "../images/balls.svg";
 import shapesAllTogether from "../images/alltogether.png";
-
-const bands = [
-  {
-    header: "Driven from a layer 1 blockchain (syscoin)",
-    text: "Layer 1 blockchain is the new root of all value creation in tomorrow's world of financial applications. DAOSYS formalizes a financing vehicle as a layer 1 decentralized ecosystem. With perpetual risk-free growth driven by stakeholders with no central governance.",
-    image: box,
-    textColor: "text-white",
-    bgColor: "bg-blue",
-    imageBgColor: "bg-blue-lighter",
-  },
-  {
-    header: "Time based lending through quests",
-    text: "Quests are created through Roundtable discussions between stakeholders and builders. Compartmentalizing risk and governance of Quests eliminates traditional contagion risks. With the revolutionary debt market technology from DAOSys, capital risk is converted to opportunity costs. Builders have little to no costs of borrowing capital due to market driven coverage of lending. This effectively creates global financial inclusion and reduces barriers of entry.",
-    image: discs,
-    textColor: "text-blue",
-    bgColor: "bg-white",
-    imageBgColor: "bg-white-darker",
-  },
-  {
-    header: "Group Collaboration with Roundtable",
-    text: "Roundtables provide a compartmentalized governance solution for coordinating ventures. Stakeholders and Builders are free to manage their venture and finances independent of other DAO members. Allowing for best-of-breed solutions to fit any venture.",
-    image: pie,
-    textColor: "text-white",
-    bgColor: "bg-green",
-    imageBgColor: "bg-green-lighter",
-  },
-  {
-    header: "No Systemic Risks with DAO Participation",
-    text: "Self-sovereign treasury management and market index derivatives differentiates DAOSys from existing DAOs. Members not only face no risk from the actions of other members, instead profiting from the increased volume. As a result, general volume is harnessed to create a feedback loop of funding for perpetual development.",
-    image: balls,
-    textColor: "text-blue",
-    bgColor: "bg-white",
-    imageBgColor: "bg-white-darker",
-  },
-];
+import bands from "../data/bands.mjs";
+import Band from "../components/band.astro";
 ---
 
 <Layout>
@@ -98,56 +61,46 @@ const bands = [
       Risk-free deployment of capital.
     </p>
   </div>
-  {bands.map((band, index) => (
-    <div
-      class={`${band.textColor} md:flex md:h-[45vw] ${
-        index % 2 === 0 ? "" : "flex-row-reverse"
-      }`}
-    >
-      <div
-        class={`${band.imageBgColor} grid place-content-center md:w-1/2 p-8`}
-      >
-        <img src={band.image} />
-      </div>
-      <div
-        class={`${band.bgColor} grid place-content-center md:w-1/2 p-8 md:px-24`}
-      >
-        <div>
-          <h2>{band.header}</h2>
-          <div class="mt-8">{band.text}</div>
-        </div>
-      </div>
-    </div>
-  ))}
+  {bands.map((band, index) => <Band item={band} index={index} />)}
 </Layout>
 
 <script hoist type="module">
-  // function getScrollPercent() {
-  //   var h = document.documentElement,
-  //     b = document.body,
-  //     st = "scrollTop",
-  //     sh = "scrollHeight";
-  //   return ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100;
-  // }
-
-  // window.onscroll = function () {
-  //   const scrollPercentage = getScrollPercent();
-  //   console.log({ scrollPercentage });
-  //   document.getElementById("heroGraphic").style.transform = `translateY(${
-  //     (-0.5 + (percentage === 1 ? 0.5 : percentage)) * 20
-  //   }%)`;
-  // };
+  // PARALLAX
   function parallax() {
-    var scrolled = document.documentElement["scrollTop"]; //$(window).scrollTop();
-    // $("[data-scroll]").css(
-    //   "transform",
-    //   "translateY(" + -(scrolled * 0.02) + "px)"
-    // );
+    var scrolled = document.documentElement["scrollTop"];
     document.getElementById("heroGraphic").style.transform =
       "translateY(" + -(scrolled * 0.01) + "rem)";
   }
-
   window.onscroll = function () {
     parallax();
   };
+
+  // Load animation vids while scrolling
+  // function handleIntersection(entries) {
+  //   entries.map((entry) => {
+  //     console.log("entry.dataset.src", entry.target.dataset.src);
+  //     if (entry.isIntersecting) {
+  //       // entry.target.classList.add("");
+  //       entry.target.src = entry.target.dataset.src;
+  //     } else {
+  //       // entry.target.src = "";
+  //       // entry.target.classList.remove("");
+  //     }
+  //   });
+  // }
+
+  function handleIntersection(entries) {
+    console.log({ entries });
+    entries.map((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.src = entry.target.dataset.src;
+        // entry.target.classList.add(‘loaded)
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const target = document.querySelectorAll(".band-video");
+  const observer = new IntersectionObserver(handleIntersection);
+  target.forEach((element) => observer.observe(element));
 </script>
