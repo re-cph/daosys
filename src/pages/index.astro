@@ -79,7 +79,8 @@ import Band from "../components/band.astro";
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
-        entry.target.src = entry.target.dataset.src;
+        entry.target.play();
+        // entry.target.src = entry.target.dataset.src;
         // entry.target.classList.add(‘loaded)
         observer.unobserve(entry.target);
       }
