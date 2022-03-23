@@ -76,21 +76,7 @@ import Band from "../components/band.astro";
   };
 
   // Load animation vids while scrolling
-  // function handleIntersection(entries) {
-  //   entries.map((entry) => {
-  //     console.log("entry.dataset.src", entry.target.dataset.src);
-  //     if (entry.isIntersecting) {
-  //       // entry.target.classList.add("");
-  //       entry.target.src = entry.target.dataset.src;
-  //     } else {
-  //       // entry.target.src = "";
-  //       // entry.target.classList.remove("");
-  //     }
-  //   });
-  // }
-
   function handleIntersection(entries) {
-    console.log({ entries });
     entries.map((entry) => {
       if (entry.isIntersecting) {
         entry.target.src = entry.target.dataset.src;
