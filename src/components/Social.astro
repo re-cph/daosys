@@ -1,0 +1,19 @@
+---
+import twitter from "../images/twitter.svg";
+import facebook from "../images/facebook.svg";
+import linkedIn from "../images/linkedIn.svg";
+
+const { wrapperCss } = Astro.props;
+---
+
+<div class={wrapperCss}>
+  <a href="">
+    <img src={facebook} />
+  </a>
+  <a href="https://twitter.com/daosys_official/" target="_blank">
+    <img src={twitter} />
+  </a>
+  <a href="">
+    <img src={linkedIn} />
+  </a>
+</div>

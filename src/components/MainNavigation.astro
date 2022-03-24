@@ -1,4 +1,6 @@
 ---
+import Social from "../components/Social.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 import logo from "../images/logo.svg";
 import menuItems from "../data/menuItems.mjs";
 
@@ -6,7 +8,7 @@ const currentPage = Astro.request.url.pathname;
 ---
 
 <aside
-  class="fixed z-10 grid grid-cols-2 w-full col-span-12 sm:col-span-3 lg:col-span-2 text-white"
+  class="fixed z-10 md:grid md:grid-cols-2 w-full text-white"
   data-previousColor="text-white"
   id="menu"
 >
@@ -17,27 +19,44 @@ const currentPage = Astro.request.url.pathname;
   <input type="checkbox" id="menuCheckbox" class="hidden" />
   <label
     for="menuCheckbox"
-    class="sm:hidden absolute right-0 top-4 py-4 px-2.5 w-12 h-12"
+    class="sm:hidden relative right-0 top-4 py-4 px-2.5 w-12 h-12 z-20"
   >
     <div></div>
     <div></div>
     <div></div>
   </label>
-  <nav class="mt-12 duration-300" id="menuContainer">
-    <ul class="flex space-x-12 justify-end mr-12">
-      {menuItems.map(({ href, name }) => (
-        <li class="leading-tight">
-          <a
-            class={`hover:opacity-50 ${
-              currentPage === href ? "underline" : ""
-            }`}
-            href={`${href}`}
-          >
-            {name}
-          </a>
-        </li>
-      ))}
-    </ul>
+  <nav
+    class="absolute top-0 right-0 w-screen h-screen duration-300 flex md:mt-10 md:h-auto md:static md:w-auto md:block"
+    id="menuContainer"
+  >
+    <button type="button" id="closer" class="flex w-1/6 md:hidden">
+      <!-- closer -->
+    </button>
+    <div
+      class="flex flex-col w-5/6 h-full bg-blue md:bg-transparent md:flex-row md:justify-end"
+    >
+      <ul
+        class="flex flex-col space-y-16 p-8 justify-end md:items-center md:p-0 md:flex-row md:space-y-0 md:space-x-12 md:mr-12"
+      >
+        {menuItems.map(({ href, name }) => (
+          <li class="leading-none">
+            <a
+              class={`hover:opacity-50 ${
+                currentPage === href ? "underline" : ""
+              }`}
+              href={`${href}`}
+            >
+              {name}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <Social wrapperCss="flex space-x-4 ml-8 mt-12 md:hidden" />
+
+      <NewsletterSignup
+        wrapperCss="col-span-12 mt-20 mx-8 md:hidden md:col-span-4 md:mt-0"
+      />
+    </div>
   </nav>
 </aside>
 
@@ -56,6 +75,7 @@ const currentPage = Astro.request.url.pathname;
   // MOBILE MENU
   const checkbox = document.getElementById("menuCheckbox");
   const container = document.getElementById("menuContainer");
+  const closer = document.getElementById("closer");
 
   checkbox.addEventListener("change", function () {
     if (this.checked) {
@@ -64,16 +84,20 @@ const currentPage = Astro.request.url.pathname;
       container.classList.remove("opened");
     }
   });
+  closer.addEventListener("click", function () {
+    checkbox.checked = false;
+    checkbox.dispatchEvent(new Event("change"));
+  });
 </script>
 
 <style>
   @media (max-width: 767px) {
     nav {
-      margin-top: -100%;
-      transition-property: margin-top;
+      margin-right: -100vw;
+      transition-property: margin-right;
     }
     nav.opened {
-      margin-top: 0;
+      margin-right: 0;
     }
   }
 
@@ -88,10 +112,10 @@ const currentPage = Astro.request.url.pathname;
     background-color: #fff;
     transition: all 0.3s ease;
     border-radius: 2px;
-    width: 24px;
+    width: 1.5rem;
     background-color: #fff;
-    height: 2px;
-    margin-bottom: 6px;
+    height: 1px;
+    margin-bottom: 0.5rem;
   }
 
   label div:first-child {
@@ -104,15 +128,19 @@ const currentPage = Astro.request.url.pathname;
   }
 
   label div:nth-child(2) {
+    width: 1rem;
     right: 0;
+    left: 0.5rem;
   }
 
   input:checked + label div:first-child {
-    transform: translateX(5px) translateY(-0.5px) rotateZ(45deg);
+    /* transform: translateX(5px) translateY(-0.5px) rotateZ(45deg); */
+    transform: translateY(0.5px) rotateZ(45deg);
   }
 
   input:checked + label div:last-child {
-    transform: translateX(5px) translateY(0.5px) rotateZ(-45deg);
+    /* transform: translateX(5px) translateY(0.5px) rotateZ(-45deg); */
+    transform: translateY(-0.5px) rotateZ(-45deg);
   }
 
   input:checked + label div:nth-child(2) {

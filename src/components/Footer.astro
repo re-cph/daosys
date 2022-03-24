@@ -2,10 +2,8 @@
 import menuItems from "../data/menuItems.mjs";
 import shapesHorizontal from "../images/shapes-horizontal.png";
 import shapesHorizontal2x from "../images/shapes-horizontal@2x.png";
-import twitter from "../images/twitter.svg";
-import facebook from "../images/facebook.svg";
-import linkedIn from "../images/linkedIn.svg";
-
+import Social from "../components/Social.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 const currentPage = Astro.request.url.pathname;
 ---
 
@@ -53,42 +51,13 @@ const currentPage = Astro.request.url.pathname;
         <div>
           M. <a href="mailto:mail@daosys.com">mail@daosys.com</a>
         </div>
-        <div class="flex space-x-4 mt-8">
-          <a href="">
-            <img src={facebook} />
-          </a>
-          <a href="https://twitter.com/daosys_official/" target="_blank">
-            <img src={twitter} />
-          </a>
-          <a href="">
-            <img src={linkedIn} />
-          </a>
-        </div>
+        <Social wrapperCss="flex space-x-4 mt-8" />
       </div>
     </div>
 
     <div class="hidden md:grid col-span-1"></div>
 
-    <div class="col-span-12 md:col-span-4 mt-20 md:mt-0">
-      <h3 class="text-2xl">Sign up to mailing list</h3>
-      <p class="mt-4">
-        Stay tuned with the latest news and input mail below ipsum dolor sit
-        amet, consectetur.
-      </p>
-
-      <form class="flex mt-8 space-x-8">
-        <input
-          type="text"
-          class="flex-grow bg-blue border-b-2 border-white placeholder-white"
-          placeholder="Enter e-mail"
-        />
-        <input
-          type="submit"
-          value="Submit"
-          class="rounded-full p-2 px-6 border cursor-pointer hover:bg-blue-light hover:text-blue"
-        />
-      </form>
-    </div>
+    <NewsletterSignup wrapperCss="col-span-12 md:col-span-4 mt-20 md:mt-0" />
   </div>
   <div
     class="container mx-auto grid grid-cols-2 text-white text-sm mt-36 pb-12"

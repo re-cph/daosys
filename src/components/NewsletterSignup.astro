@@ -1,0 +1,26 @@
+---
+const { wrapperCss } = Astro.props;
+---
+
+<div class={wrapperCss}>
+  <h3 class="text-2xl">Sign up to mailing list</h3>
+  <p class="mt-4">
+    Stay tuned with the latest news and input mail below ipsum dolor sit amet,
+    consectetur.
+  </p>
+
+  <form class="flex flex-col mt-8 space-x-8">
+    <input
+      type="text"
+      class="flex-grow bg-blue border-b-2 border-white placeholder-white"
+      placeholder="Enter e-mail"
+    />
+    <div class="flex justify-end mt-4">
+      <input
+        type="submit"
+        value="Submit"
+        class="rounded-full p-2 px-6 cursor-pointer bg-blue-dark text-white hover:bg-blue-light hover:text-blue-dark"
+      />
+    </div>
+  </form>
+</div>
