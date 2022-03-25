@@ -8,7 +8,7 @@ const currentPage = Astro.request.url.pathname;
 ---
 
 <aside
-  class="fixed z-10 md:grid md:grid-cols-2 w-full text-white"
+  class="fixed z-10 w-full text-white md:grid md:grid-cols-2 md:bg-blue-lighter"
   data-previousColor="text-white"
   id="menu"
 >
@@ -19,14 +19,14 @@ const currentPage = Astro.request.url.pathname;
   <input type="checkbox" id="menuCheckbox" class="hidden" />
   <label
     for="menuCheckbox"
-    class="sm:hidden relative right-0 top-4 py-4 px-2.5 w-12 h-12 z-20"
+    class="md:hidden relative right-0 top-4 py-4 px-2.5 w-12 h-12 z-20"
   >
     <div></div>
     <div></div>
     <div></div>
   </label>
   <nav
-    class="absolute top-0 right-0 w-screen h-screen duration-300 flex md:mt-10 md:h-auto md:static md:w-auto md:block"
+    class="absolute top-0 right-0 w-screen h-screen duration-300 flex mr-[100vw] md:h-auto md:static md:w-auto md:block md:mr-0"
     id="menuContainer"
   >
     <button type="button" id="closer" class="flex w-1/6 md:hidden">
@@ -91,15 +91,15 @@ const currentPage = Astro.request.url.pathname;
 </script>
 
 <style>
-  @media (max-width: 767px) {
-    nav {
-      margin-right: -100vw;
-      transition-property: margin-right;
-    }
-    nav.opened {
-      margin-right: 0;
-    }
+  /* @media (max-width: 767px) { */
+  nav {
+    /* margin-right: -100vw; */
+    transition-property: margin-right;
   }
+  nav.opened {
+    margin-right: 0;
+  }
+  /* } */
 
   label {
     position: absolute;

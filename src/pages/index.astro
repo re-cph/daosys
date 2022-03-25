@@ -7,7 +7,8 @@ import Band from "../components/band.astro";
 
 <Layout>
   <!-- Hero -->
-  <div id="home" class="band bg-blue-lighter" data-color="text-white">
+  <!-- <div id="home" class="band bg-blue-lighter" data-color="text-white"> -->
+  <div id="home" class="band bg-blue-lighter">
     <div
       class="container mx-auto text-white md:grid grid-cols-12 gap-x-4 items-center h-screen"
     >
@@ -28,14 +29,14 @@ import Band from "../components/band.astro";
             </a>
           </div>
 
-          <div class="flex">
+          <!-- <div class="flex">
             <a
               href=""
               class="p-4 px-6 border border-blue-dark hover:bg-blue-dark rounded-full no-underline text-sm"
             >
               Download Yellowpaper
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="col-span-7 md:relative md:h-full">
@@ -48,11 +49,12 @@ import Band from "../components/band.astro";
     </div>
   </div>
   <!-- Text section -->
-  <div
+  <!-- <div
     id="about"
     class="band container mx-auto py-40 text-splash"
     data-color="text-blue"
-  >
+  > -->
+  <div id="about" class="band container mx-auto py-40 text-splash">
     <p>
       DAOs are organizations that run completely on the blockchain and are
       governed by token holders. They are fully autonomous, transparent and
@@ -86,34 +88,42 @@ import Band from "../components/band.astro";
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
+        // START VIDEO
         if (entry.target.tagName === "VIDEO") {
           entry.target.play();
         }
-        observer.unobserve(entry.target);
+        // observer.unobserve(entry.target);
+
+        // SET MENU COLOR
+        // menu.classList.replace(
+        //   menu.dataset.previousColor,
+        //   entry.target.dataset.color
+        // );
+        // menu.dataset.previousColor = entry.target.dataset.color;
       }
     });
   }
 
-  function handleIntersection2(entries) {
-    entries.map((entry) => {
-      // console.log("entry.intersectionRatio", entry.intersectionRatio);
-      if (entry.isIntersecting) {
-        menu.classList.replace(
-          menu.dataset.previousColor,
-          entry.target.dataset.color
-        );
-        menu.dataset.previousColor = entry.target.dataset.color;
-      }
-    });
-  }
+  // function handleIntersection2(entries) {
+  //   entries.map((entry) => {
+  //     // console.log("entry.intersectionRatio", entry.intersectionRatio);
+  //     if (entry.isIntersecting) {
+  //       menu.classList.replace(
+  //         menu.dataset.previousColor,
+  //         entry.target.dataset.color
+  //       );
+  //       menu.dataset.previousColor = entry.target.dataset.color;
+  //     }
+  //   });
+  // }
 
   const target = document.querySelectorAll(".band");
   const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.2,
-  });
-  const observer2 = new IntersectionObserver(handleIntersection2, {
     threshold: 1,
   });
+  // const observer2 = new IntersectionObserver(handleIntersection2, {
+  //   threshold: 1,
+  // });
   target.forEach((element) => observer.observe(element));
-  target.forEach((element) => observer2.observe(element));
+  // target.forEach((element) => observer2.observe(element));
 </script>
