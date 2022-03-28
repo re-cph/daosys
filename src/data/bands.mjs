@@ -14,8 +14,8 @@ export default [
     imageBgColor: "bg-blue-lighter",
   },
   {
-    header: "Time based lending through quests",
-    text: "Quests are created through Roundtable discussions between stakeholders and builders. Compartmentalizing risk and governance of Quests eliminates traditional contagion risks. With the revolutionary debt market technology from DAOSys, capital risk is converted to opportunity costs. Builders have little to no costs of borrowing capital due to market driven coverage of lending. This effectively creates global financial inclusion and reduces barriers of entry.",
+    header: "Time-based funding through quests",
+    text: "Quests are created through Roundtable discussions between stakeholders and builders. Compartmentalizing risk and governance of Quests eliminates traditional contagion risks. With the revolutionary Autonomous Service Engine technology from DAOSYS, capital risk is converted to opportunity costs. Builders have little to no costs of obtaining capital due to market driven coverage of funding. This effectively creates global financial inclusion and reduces barriers of entry.",
     // image: discs,
     video: '/videos/discs.mp4',
     textColor: "text-blue",
@@ -33,7 +33,7 @@ export default [
   },
   {
     header: "No Systemic Risks with DAO Participation",
-    text: "Self-sovereign treasury management and market index derivatives differentiates DAOSys from existing DAOs. Members not only face no risk from the actions of other members, instead profiting from the increased volume. As a result, general volume is harnessed to create a feedback loop of funding for perpetual development.",
+    text: "Self-sovereign treasury management and market index derivatives differentiates DAOSYS from existing DAOs. Members not only face no risk from the actions of other members, instead profiting from the increased volume. As a result, general volume is harnessed to create a feedback loop of funding for perpetual development.",
     // image: balls,
     video: '/videos/balls.mp4',
     textColor: "text-blue",
