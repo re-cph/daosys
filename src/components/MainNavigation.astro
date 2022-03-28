@@ -61,20 +61,9 @@ const currentPage = Astro.request.url.pathname;
 </aside>
 
 <script hoist type="module">
-  // SMOOTH SCROLLING
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      document.querySelector(this.getAttribute("href")).scrollIntoView({
-        behavior: "smooth",
-      });
-    });
-  });
-
   // MOBILE MENU
-  const checkbox = document.getElementById("menuCheckbox");
   const container = document.getElementById("menuContainer");
+  const checkbox = document.getElementById("menuCheckbox");
   const closer = document.getElementById("closer");
 
   checkbox.addEventListener("change", function () {
@@ -86,7 +75,14 @@ const currentPage = Astro.request.url.pathname;
   });
   closer.addEventListener("click", function () {
     checkbox.checked = false;
-    checkbox.dispatchEvent(new Event("change"));
+  });
+
+  container.querySelectorAll("a").forEach((anchor) => {
+    anchor.addEventListener("click", function () {
+      console.log("hiiiaifasdfasdafs");
+      checkbox.checked = false;
+      checkbox.dispatchEvent(new Event("change"));
+    });
   });
 </script>
 
