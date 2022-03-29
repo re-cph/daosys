@@ -79,7 +79,6 @@ const currentPage = Astro.request.url.pathname;
 
   container.querySelectorAll("a").forEach((anchor) => {
     anchor.addEventListener("click", function () {
-      console.log("hiiiaifasdfasdafs");
       checkbox.checked = false;
       checkbox.dispatchEvent(new Event("change"));
     });
