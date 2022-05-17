@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257" height="257" viewBox="0 0 257 257">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_487" data-name="Rectangle 487" width="179.892" height="161.461" fill="none" stroke="#fff" stroke-width="4"/>
+    </clipPath>
+  </defs>
+  <g id="Group_304" data-name="Group 304" transform="translate(-592 -4596)">
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="128.5" cy="128.5" r="128.5" transform="translate(592 4596)" fill="#445064"/>
+    <g id="Group_281" data-name="Group 281" transform="translate(629.996 4648.059)" opacity="0.7">
+      <g id="Group_263" data-name="Group 263" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <circle id="Ellipse_3" data-name="Ellipse 3" cx="34.484" cy="34.484" r="34.484" transform="translate(54.002 45.415)" fill="none" stroke="#fff" stroke-width="4"/>
+        <path id="Path_726" data-name="Path 726" d="M54.1,20.7,31.357,22.632c-4.951.522-9.362-2.3-9.835-6.764s3.209-8.537,8.16-9.059L82.866,1.25l2.539.362,41.137,15.52s5.84.675,15.05-3.884" transform="translate(31.431 1.83)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_727" data-name="Path 727" d="M121.546,32.722l-25.4,9.449c-11.5,2.4-20.831-5.328-20.831-5.328-4.618-3.478-14.109-7.717-14.109-7.717L45.238,22.6c-4.759-1.943-7.261-6.929-5.562-11.082S46.652,5.561,51.4,7.5l22.1,9.025" transform="translate(57.272 9.837)" fill="none" stroke="#fff" stroke-width="4"/>
+        <path id="Path_728" data-name="Path 728" d="M90.279,57.585l22.745-1.929c4.951-.522,9.362,2.3,9.835,6.761s-3.209,8.535-8.165,9.059L61.515,77.039l-2.539-.365L17.839,61.155S12,60.482,2.789,65.039" transform="translate(4.081 81.343)" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_729" data-name="Path 729" d="M.436,54.16l25.4-9.449c11.5-2.4,20.826,5.328,20.826,5.328,4.618,3.475,14.114,7.715,14.114,7.715l15.966,6.522c4.759,1.943,7.266,6.931,5.567,11.082s-6.976,5.961-11.732,4.017L48.482,70.35" transform="translate(0.638 64.743)" fill="none" stroke="#fff" stroke-width="4"/>
+      </g>
+    </g>
+  </g>
+</svg>

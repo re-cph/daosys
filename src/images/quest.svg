@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257" height="257" viewBox="0 0 257 257">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_507" data-name="Rectangle 507" width="155.071" height="149.785" fill="none" stroke="#697283" stroke-width="4"/>
+    </clipPath>
+  </defs>
+  <g id="Group_308" data-name="Group 308" transform="translate(-182 -6401)">
+    <circle id="Ellipse_13" data-name="Ellipse 13" cx="128.5" cy="128.5" r="128.5" transform="translate(182 6401)" fill="#dcdce1" opacity="0.22"/>
+    <g id="Group_299" data-name="Group 299" transform="translate(232.964 6450)">
+      <g id="Group_298" data-name="Group 298" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Path_778" data-name="Path 778" d="M100.118,108.49h-75.4A23.531,23.531,0,0,1,1.25,85.027v-2.3A23.531,23.531,0,0,1,24.714,59.267H45.54A13.455,13.455,0,0,0,58.948,45.85V41.21A13.447,13.447,0,0,0,45.54,27.8H36.288" transform="translate(1.706 37.948)" fill="none" stroke="#697283" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_779" data-name="Path 779" d="M104.787,49.168c0,19.36-35.059,78.4-35.059,78.4s-35.057-59.041-35.057-78.4a35.058,35.058,0,1,1,70.116,0Z" transform="translate(47.327 19.259)" fill="none" stroke="#697283" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_780" data-name="Path 780" d="M73.105,37.575A14.971,14.971,0,1,1,58.132,22.6,14.976,14.976,0,0,1,73.105,37.575Z" transform="translate(58.921 30.853)" fill="none" stroke="#697283" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_781" data-name="Path 781" d="M40.569,20.632c0,10.7-19.382,43.344-19.382,43.344S1.806,31.336,1.806,20.632a19.382,19.382,0,1,1,38.763,0Z" transform="translate(2.465 1.706)" fill="none" stroke="#697283" stroke-linejoin="round" stroke-width="4"/>
+        <path id="Path_782" data-name="Path 782" d="M13.527,10.2a2.236,2.236,0,1,1-2.233-2.237A2.23,2.23,0,0,1,13.527,10.2" transform="translate(12.36 10.871)" fill="none" stroke="#697283" stroke-width="4"/>
+        <path id="Path_783" data-name="Path 783" d="M13.527,10.2a2.236,2.236,0,1,1-2.233-2.237A2.23,2.23,0,0,1,13.527,10.2Z" transform="translate(12.36 10.871)" fill="none" stroke="#697283" stroke-width="4"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -7,13 +7,15 @@ import NewsletterSignup from "../components/NewsletterSignup.astro";
 const currentPage = Astro.request.url.pathname;
 ---
 
-<div id="contact" class="container mx-auto grid grid-cols-12">
-  <img
-    src={shapesHorizontal}
-    srcset={shapesHorizontal2x}
-    alt=""
-    class="col-span-12 md:col-span-5 md:-ml-20"
-  />
+<div id="contact" class="bg-white-darker md:-mt-32">
+  <div class="container mx-auto grid grid-cols-12">
+    <img
+      src={shapesHorizontal}
+      srcset={shapesHorizontal2x}
+      alt=""
+      class="col-span-12 md:col-span-5 md:-ml-20"
+    />
+  </div>
 </div>
 <footer class="bg-blue pt-40 -mt-36">
   <div class="container grid grid-cols-12 mx-auto text-white">

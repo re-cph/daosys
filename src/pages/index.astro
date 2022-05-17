@@ -1,8 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import shapesAllTogether from "../images/alltogether.png";
-import bands from "../data/bands.mjs";
-import Band from "../components/band.astro";
+import bandsVideo from "../data/bandsVideo.mjs";
+import BandVideo from "../components/BandVideo.astro";
+import bandsTriple from "../data/bandsTriple.mjs";
+import BandTriple from "../components/BandTriple.astro";
 ---
 
 <Layout>
@@ -70,8 +72,10 @@ import Band from "../components/band.astro";
     </p>
   </div>
   <div id="services">
-    {bands.map((band, index) => <Band item={band} index={index} />)}
+    {bandsVideo.map((band, index) => <BandVideo item={band} index={index} />)}
   </div>
+
+  {bandsTriple.map((band) => <BandTriple band={band} />)}
 </Layout>
 
 <script hoist type="module">

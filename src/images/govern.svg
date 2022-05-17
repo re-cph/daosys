@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="256" height="257" viewBox="0 0 256 257">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_504" data-name="Rectangle 504" width="160.658" height="128.676" fill="none" stroke="#697283" stroke-width="4"/>
+    </clipPath>
+  </defs>
+  <g id="Group_310" data-name="Group 310" transform="translate(-992 -6400)">
+    <ellipse id="Ellipse_11" data-name="Ellipse 11" cx="128" cy="128.5" rx="128" ry="128.5" transform="translate(992 6400)" fill="#dcdce1" opacity="0.22"/>
+    <g id="Group_292" data-name="Group 292" transform="translate(1045.594 6480.272)">
+      <rect id="Rectangle_501" data-name="Rectangle 501" width="16.062" height="16.062" transform="translate(47.309 18.428)" fill="none" stroke="#697283" stroke-width="4"/>
+      <rect id="Rectangle_502" data-name="Rectangle 502" width="16.064" height="16.062" transform="translate(47.508 47.713)" fill="none" stroke="#697283" stroke-width="4"/>
+      <rect id="Rectangle_503" data-name="Rectangle 503" width="16.064" height="16.062" transform="translate(77.591 18.428)" fill="none" stroke="#697283" stroke-width="4"/>
+      <path id="Path_758" data-name="Path 758" d="M45.461,20.863V7.8H61.525V21.7" transform="translate(61.887 10.624)" fill="none" stroke="#697283" stroke-width="4"/>
+      <g id="Group_291" data-name="Group 291" transform="translate(0 0)">
+        <g id="Group_290" data-name="Group 290" clip-path="url(#clip-path)">
+          <path id="Path_759" data-name="Path 759" d="M64.883,102.338,36.391,73.787a7.1,7.1,0,0,1,.054-10.019L37.22,63a7.1,7.1,0,0,1,10.017.054L60.175,75.974V24.263a7.106,7.106,0,0,1,7.084-7.084h.59a7.106,7.106,0,0,1,7.084,7.084v26.6l27.155,4.489s8.855,1.773,8.855,13.382L108.355,101.2" transform="translate(46.763 23.386)" fill="none" stroke="#697283" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+          <path id="Path_760" data-name="Path 760" d="M73.3,101.318H8.334A7.1,7.1,0,0,1,1.25,94.234V8.334A7.1,7.1,0,0,1,8.334,1.25H131.066a7.106,7.106,0,0,1,7.084,7.084v56.92" transform="translate(1.702 1.701)" fill="none" stroke="#697283" stroke-linejoin="round" stroke-width="4"/>
+          <line id="Line_97" data-name="Line 97" y2="99.898" transform="translate(30.679 3.037)" fill="none" stroke="#697283" stroke-linejoin="round" stroke-width="4"/>
+          <line id="Line_98" data-name="Line 98" y2="10.465" transform="translate(17.272 47.756)" fill="none" stroke="#697283" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
