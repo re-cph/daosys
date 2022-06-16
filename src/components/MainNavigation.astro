@@ -1,19 +1,16 @@
 ---
+import Menu from "../components/Menu.astro";
 import Social from "../components/Social.astro";
 import NewsletterSignup from "../components/NewsletterSignup.astro";
 import logo from "../images/logo.svg";
-import menuItems from "../data/menuItems.mjs";
-
-const currentPage = Astro.request.url.pathname;
 ---
 
 <aside
   class="fixed z-10 w-full text-white md:grid md:grid-cols-2 bg-blue-lighter"
   data-previousColor="text-white"
-  id="menu"
 >
   <a href="#home" class="flex">
-    <img src={logo} class="m-8 mx-4 md:m-12" />
+    <img src={logo} class="h-5 m-8 mx-4 md:m-12" />
   </a>
 
   <input type="checkbox" id="menuCheckbox" class="hidden" />
@@ -35,22 +32,7 @@ const currentPage = Astro.request.url.pathname;
     <div
       class="flex flex-col w-5/6 h-full bg-blue md:w-auto md:bg-transparent md:flex-row md:justify-end"
     >
-      <ul
-        class="flex flex-col space-y-16 p-8 justify-end md:items-center md:p-0 md:flex-row md:space-y-0 md:space-x-12 md:mr-12"
-      >
-        {menuItems.map(({ href, name }) => (
-          <li class="leading-none">
-            <a
-              class={`hover:opacity-50 ${
-                currentPage === href ? "underline" : ""
-              }`}
-              href={`${href}`}
-            >
-              {name}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <Menu wrapperCss="flex flex-col space-y-16 p-8 justify-end md:hidden md:items-center md:p-0 md:flex-row md:space-y-0 md:space-x-12 md:mr-12" />
       <Social wrapperCss="flex space-x-4 ml-8 mt-12 md:hidden" />
 
       <NewsletterSignup
@@ -58,6 +40,11 @@ const currentPage = Astro.request.url.pathname;
       />
     </div>
   </nav>
+</aside>
+
+<!-- Duplicate cause hero shapes should go over header, but under menu -->
+<aside class="hidden fixed z-30 w-full text-white md:grid md:h-[7.25rem]">
+  <Menu wrapperCss="flex flex-col space-y-16 p-8 justify-end md:items-center md:p-0 md:flex-row md:space-y-0 md:space-x-12 md:mr-12" />
 </aside>
 
 <script hoist type="module">

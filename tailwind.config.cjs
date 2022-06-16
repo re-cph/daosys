@@ -52,7 +52,7 @@ module.exports = {
     },
     extend: {
       fontSize: {
-        splash: ['2.125rem', '3.75rem']
+        splash: ['2.125rem', '3.25rem']
       },
     },
   },

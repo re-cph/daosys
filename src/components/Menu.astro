@@ -1,0 +1,21 @@
+---
+import menuItems from "../data/menuItems.mjs";
+
+const currentPage = Astro.request.url.pathname;
+const { wrapperCss } = Astro.props;
+---
+
+<ul class={wrapperCss}>
+  {menuItems.map(({ href, name }) => (
+    <li class="leading-none">
+      <a
+        class={`hover:opacity-50 ${
+          currentPage === href ? "underline" : ""
+        }`}
+        href={`${href}`}
+      >
+        {name}
+      </a>
+    </li>
+  ))}
+</ul>

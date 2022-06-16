@@ -1,35 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="257" height="257" viewBox="0 0 257 257">
   <defs>
     <clipPath id="clip-path">
-      <rect id="Rectangle_494" data-name="Rectangle 494" width="146.669" height="126.39" fill="none" stroke="#3a465a" stroke-width="4"/>
+      <rect id="Rectangle_494" data-name="Rectangle 494" width="111.365" height="95.967" fill="none" stroke="#3a465a" stroke-width="3"/>
     </clipPath>
   </defs>
-  <g id="Group_307" data-name="Group 307" transform="translate(-592 -5462)">
+  <g id="Group_306" data-name="Group 306" transform="translate(-592 -5462)">
     <circle id="Ellipse_9" data-name="Ellipse 9" cx="128.5" cy="128.5" r="128.5" transform="translate(592 5462)" fill="#fff" opacity="0.29"/>
-    <g id="Group_274" data-name="Group 274" transform="translate(640.324 5535.993)">
-      <rect id="Rectangle_491" data-name="Rectangle 491" width="18.126" height="36.807" transform="translate(37.831 30.243)" fill="none" stroke="#3a465a" stroke-width="4"/>
-      <line id="Line_58" data-name="Line 58" y1="11.448" transform="translate(46.894 18.439)" fill="none" stroke="#3a465a" stroke-width="4"/>
-      <line id="Line_59" data-name="Line 59" y1="10.776" transform="translate(46.894 67.746)" fill="none" stroke="#3a465a" stroke-width="4"/>
-      <rect id="Rectangle_492" data-name="Rectangle 492" width="18.126" height="36.807" transform="translate(78.917 45.876)" fill="none" stroke="#3a465a" stroke-width="4"/>
-      <line id="Line_60" data-name="Line 60" y1="11.448" transform="translate(87.98 34.071)" fill="none" stroke="#3a465a" stroke-width="4"/>
-      <line id="Line_61" data-name="Line 61" y1="10.776" transform="translate(87.98 83.379)" fill="none" stroke="#3a465a" stroke-width="4"/>
+    <g id="Group_274" data-name="Group 274" transform="translate(658 5545)">
+      <rect id="Rectangle_491" data-name="Rectangle 491" width="13.763" height="27.947" transform="translate(28.725 22.964)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_58" data-name="Line 58" y1="8.692" transform="translate(35.606 14)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_59" data-name="Line 59" y1="8.182" transform="translate(35.606 51.44)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+      <rect id="Rectangle_492" data-name="Rectangle 492" width="13.763" height="27.947" transform="translate(59.921 34.833)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_60" data-name="Line 60" y1="8.692" transform="translate(66.803 25.87)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+      <line id="Line_61" data-name="Line 61" y1="8.182" transform="translate(66.803 63.309)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
       <g id="Group_271" data-name="Group 271" transform="translate(0 0)">
         <g id="Group_270" data-name="Group 270" clip-path="url(#clip-path)">
-          <rect id="Rectangle_493" data-name="Rectangle 493" width="18.126" height="36.807" transform="translate(120.002 17.38)" fill="none" stroke="#3a465a" stroke-width="4"/>
-          <line id="Line_62" data-name="Line 62" y1="11.448" transform="translate(129.065 5.575)" fill="none" stroke="#3a465a" stroke-width="4"/>
+          <rect id="Rectangle_493" data-name="Rectangle 493" width="13.763" height="27.947" transform="translate(91.117 13.197)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+          <line id="Line_62" data-name="Line 62" y1="8.692" transform="translate(97.999 4.233)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
         </g>
       </g>
-      <line id="Line_63" data-name="Line 63" y1="10.776" transform="translate(129.066 54.883)" fill="none" stroke="#3a465a" stroke-width="4"/>
+      <line id="Line_63" data-name="Line 63" y1="8.182" transform="translate(97.999 41.673)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
       <g id="Group_273" data-name="Group 273" transform="translate(0 0)">
         <g id="Group_272" data-name="Group 272" clip-path="url(#clip-path)">
-          <path id="Path_742" data-name="Path 742" d="M138.057,111.767H6.265V0" transform="translate(8.612 0)" fill="none" stroke="#3a465a" stroke-width="4"/>
-          <line id="Line_64" data-name="Line 64" x2="14.746" transform="translate(0 29.349)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_65" data-name="Line 65" x2="14.746" transform="translate(0 62.816)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_66" data-name="Line 66" x2="14.746" transform="translate(0 96.284)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_67" data-name="Line 67" y1="14.746" transform="translate(30.438 111.643)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_68" data-name="Line 68" y1="14.746" transform="translate(62.254 111.643)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_69" data-name="Line 69" y1="14.746" transform="translate(94.072 111.643)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
-          <line id="Line_70" data-name="Line 70" y1="14.746" transform="translate(125.888 111.643)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="4"/>
+          <path id="Path_742" data-name="Path 742" d="M106.334,84.864H6.265V0" transform="translate(5.031 0)" fill="none" stroke="#3a465a" stroke-miterlimit="10" stroke-width="3"/>
+          <line id="Line_64" data-name="Line 64" x2="11.197" transform="translate(0 22.284)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_65" data-name="Line 65" x2="11.197" transform="translate(0 47.696)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_66" data-name="Line 66" x2="11.197" transform="translate(0 73.108)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_67" data-name="Line 67" y1="11.197" transform="translate(23.111 84.77)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_68" data-name="Line 68" y1="11.197" transform="translate(47.269 84.77)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_69" data-name="Line 69" y1="11.197" transform="translate(71.428 84.77)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
+          <line id="Line_70" data-name="Line 70" y1="11.197" transform="translate(95.586 84.77)" fill="none" stroke="#3a465a" stroke-linejoin="round" stroke-width="3"/>
         </g>
       </g>
     </g>

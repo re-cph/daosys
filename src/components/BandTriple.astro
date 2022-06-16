@@ -3,8 +3,8 @@ import Clock from "../images/clock.svg";
 const { band } = Astro.props;
 ---
 
-<div class={`${band.bgColor} pt-8 md:pt-20 pb-8 md:pb-40`}>
-  <div class="container mx-auto">
+<div class={`${band.bgColor} py-[6.25rem] md:pt-20 md:pb-40`}>
+  <div class="container px-8 mx-auto">
     <h2 class={`${band.textColor1} mb-8 md:mb-0`}>{band.title}</h2>
   </div>
   {band.badge ? (
@@ -20,21 +20,16 @@ const { band } = Astro.props;
   ) : (
     <div class="mt-16"></div>
   )}
-  <div class="container mx-auto text-white md:grid grid-cols-3 gap-8">
+  <div class="container mx-auto text-white grid-cols-3 gap-8 px-8 md:px-8 md:grid">
     {band.items.map((item, index) => (
       <div class="flex flex-col mt-16 md:mt-0">
-        <div class="grid grid-cols-2 md:grid-cols-1">
-          <div
-            class={`${band.textColor1} text-6xl md:text-splash grid items-center`}
-          >
-            0{index + 1}
-          </div>
-          <div class="md:p-12 rounded-full self-center">
-            <img src={item.image} alt="" />
+        <div class="">
+          <div class="p-4 md:p-12 rounded-full self-center">
+            <img src={item.image} alt="" class="mx-auto" />
           </div>
         </div>
         <div class={`${band.textColor2} text-3xl mt-4 md:mt-4`}>
-          {item.title}
+          0{index + 1} - {item.title}
         </div>
         <div
           class={`${band.textColor2} ${band.borderColor} mt-4 pt-2 border-t`}
