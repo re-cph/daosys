@@ -12,7 +12,7 @@ import BandTriple from "../components/BandTriple.astro";
 
 <Layout>
   <!-- Hero -->
-  <div id="home" class="band bg-blue-lighter">
+  <div id="home" class="bg-blue-lighter">
     <div
       class="container mx-auto text-white md:grid grid-cols-12 gap-x-4 items-center h-screen"
     >
@@ -62,7 +62,7 @@ import BandTriple from "../components/BandTriple.astro";
     class="band container mx-auto py-40 text-splash"
     data-color="text-blue"
   > -->
-  <div id="about" class="band container mx-auto px-8 md:px4 py-[6.25rem] md:py-40 md:text-splash">
+  <div id="about" class="container mx-auto px-8 md:px4 py-[6.25rem] md:py-40 md:text-splash">
     <p>
       DAOs are organizations that run completely on the blockchain and are
       governed by token holders. They are fully autonomous, transparent and
@@ -100,7 +100,6 @@ import BandTriple from "../components/BandTriple.astro";
   };
 
   // Load animation vids while scrolling
-  const menu = document.getElementById("menu");
   function handleIntersection(entries) {
     entries.map((entry) => {
       if (entry.isIntersecting) {
@@ -108,14 +107,43 @@ import BandTriple from "../components/BandTriple.astro";
         if (entry.target.tagName === "VIDEO") {
           entry.target.play();
         }
-        // observer.unobserve(entry.target);
       }
     });
   }
 
-  const target = document.querySelectorAll(".band");
+  // Load static animation while scrolling
+  function handleIntersection2(entries) {
+    entries.map((entry) => {
+      if (entry.isIntersecting) {
+        if (entry.target.classList.contains('static-graphic')) {
+          entry.target.classList.remove('opacity-0');
+          entry.target.classList.add('opacity-100');
+
+          entry.target.classList.remove('top-16');
+          entry.target.classList.add('top-0');
+        }
+      } else {
+        if (entry.target.classList.contains('static-graphic')) {
+          entry.target.classList.remove('opacity-100');
+          entry.target.classList.add('opacity-0');
+          
+          entry.target.classList.remove('top-0');
+          entry.target.classList.add('top-16');
+        }
+      }
+    });
+  }
+
+  const target = document.querySelectorAll(".motion-graphic");
   const observer = new IntersectionObserver(handleIntersection, {
     threshold: 0.85,
   });
+
+  const target2 = document.querySelectorAll(".static-graphic");
+  const observer2 = new IntersectionObserver(handleIntersection2, {
+    threshold: 0.33,
+  });
+
   target.forEach((element) => observer.observe(element));
+  target2.forEach((element) => observer2.observe(element));
 </script>

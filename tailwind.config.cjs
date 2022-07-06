@@ -65,6 +65,8 @@ module.exports = {
     'bg-white-darker',
     'bg-green',
     'bg-green-lighter',
-    'outline-2'
+    'outline-2',
+    'delay-[100ms]',
+    'delay-[200ms]',
   ]
 };
