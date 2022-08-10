@@ -39,7 +39,7 @@ export default [
     ]
   },
   {
-    title: "Risk-free Growth",
+    title: "Risk-mitigated Growth",
     bgColor: "bg-blue-light",
     textColor1: "text-blue",
     textColor2: "text-blue",
